@@ -14,8 +14,8 @@ A simple RESTful API built with Node.js, TypeScript, Express, and MongoDB to log
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/humanchain-ai-safety-api.git
-cd humanchain-ai-safety-api
+git clone https://github.com/yesiamkriti/Sparklehood_humanchain-ai-safety-api.git
+cd sparklehood_humanchain-ai-safety-api
 ```
 2. Install dependencies
 ```bash
