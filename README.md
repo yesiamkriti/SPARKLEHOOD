@@ -16,43 +16,25 @@ A simple RESTful API built with Node.js, TypeScript, Express, and MongoDB to log
 ```bash
 git clone https://github.com/yourusername/humanchain-ai-safety-api.git
 cd humanchain-ai-safety-api
+```
 2. Install dependencies
-bash
-Copy
-Edit
+```bash
 npm install
-3. Setup Environment Variables
-Create a .env file in the root directory:
+```
 
-env
-Copy
-Edit
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/ai_safety_incidents
 4. Run the application
-bash
-Copy
-Edit
+```bash
 # Development mode
 npx ts-node-dev src/server.ts
-🗃️ Optional: Pre-populate the DB with sample data
-You can run the seeder script:
-
-bash
-Copy
-Edit
-npx ts-node scripts/seed.ts
-Or manually POST the sample incidents using Postman or curl.
+```
+I have create Ai-Saftey.postman_collection.json
+Use Postman and import the data there.
 
 📖 API Endpoints
-GET /incidents
-Fetch all incidents.
+GET /incidents  ----> Fetch all incidents.
 
 Response:
-
-json
-Copy
-Edit
+```bash
 [
   {
     "id": "605f...",
@@ -62,24 +44,18 @@ Edit
     "reported_at": "2025-04-02T18:00:00Z"
   }
 ]
-POST /incidents
-Log a new incident.
+```
+
+POST /incidents  ----> Log a new incident.
 
 Request:
-
-json
-Copy
-Edit
+```bash
 {
   "title": "Example Incident",
   "description": "Something went wrong with the AI.",
   "severity": "Medium"
 }
-Response:
-
-json
-Copy
-Edit
+# Response:
 {
   "id": "...",
   "title": "...",
@@ -87,13 +63,12 @@ Edit
   "severity": "...",
   "reported_at": "..."
 }
-GET /incidents/:id
-Get a specific incident by ID.
+```
+GET /incidents/:id ----> Get a specific incident by ID.
 
 Response: 200 OK or 404 Not Found
 
-DELETE /incidents/:id
-Delete an incident by ID.
+DELETE /incidents/:id ----> Delete an incident by ID.
 
 Response: 204 No Content or 404 Not Found
 
@@ -103,4 +78,3 @@ Incident severity is validated to be one of "Low", "Medium", or "High".
 Errors are handled with a global error handler middleware.
 
 MongoDB _id is used as the unique identifier for each incident.
-```
