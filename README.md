@@ -30,11 +30,12 @@ npx ts-node-dev src/server.ts
 I have create Ai-Saftey.postman_collection.json
 Use Postman and import the data there.
 
-📖 API Endpoints
-GET /incidents  ----> Fetch all incidents.
+## 📖 API Endpoints
 
-Response:
+## GET /incidents  ----> Fetch all incidents.
+
 ```bash
+# Response:
 [
   {
     "id": "605f...",
@@ -46,10 +47,10 @@ Response:
 ]
 ```
 
-POST /incidents  ----> Log a new incident.
+## POST /incidents  ----> Log a new incident.
 
-Request:
 ```bash
+# Request:
 {
   "title": "Example Incident",
   "description": "Something went wrong with the AI.",
@@ -64,15 +65,15 @@ Request:
   "reported_at": "..."
 }
 ```
-GET /incidents/:id ----> Get a specific incident by ID.
+## GET /incidents/:id ----> Get a specific incident by ID.
 
 Response: 200 OK or 404 Not Found
 
-DELETE /incidents/:id ----> Delete an incident by ID.
+## DELETE /incidents/:id ----> Delete an incident by ID.
 
 Response: 204 No Content or 404 Not Found
 
-📝 Design Notes
+## 📝 Design Notes
 Incident severity is validated to be one of "Low", "Medium", or "High".
 
 Errors are handled with a global error handler middleware.
