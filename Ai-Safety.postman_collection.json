@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "2b70d361-c443-44d5-a558-df2263b21149",
+		"name": "Ai-Safety",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33929270"
+	},
+	"item": [
+		{
+			"name": "getIncidents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/incidents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"incidents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteIncidents",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Example Incident\",\r\n  \"description\": \"Something went wrong with the AI.\",\r\n  \"severity\": \"Medium\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/incidents/:680b91718a6bff2957abc882",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"incidents",
+						":680b91718a6bff2957abc882"
+					],
+					"variable": [
+						{
+							"key": "680b91718a6bff2957abc882",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postIncidents",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/incidents/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"incidents",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
